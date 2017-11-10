@@ -5,7 +5,8 @@ RSpec.describe PrawnPrinter do
     expect(PrawnPrinter::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "makes a doc" do
+    klass = PrawnPrinter::Printer.new
+    expect(klass.document).to be_a Prawn::Document
   end
 end
